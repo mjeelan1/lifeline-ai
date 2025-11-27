@@ -45,30 +45,48 @@ st.markdown("""
         border-radius: 10px;
         padding: 20px;
         border-left: 5px solid #1E88E5;
+        color: #1a1a2e !important;
+    }
+    .prediction-box h2 {
+        color: #1a1a2e !important;
+        margin: 0;
     }
     .urgency-high {
         background-color: #ffebee;
         border-left: 5px solid #e53935;
         padding: 15px;
         border-radius: 5px;
+        color: #b71c1c !important;
+    }
+    .urgency-high h3, .urgency-high p {
+        color: #b71c1c !important;
     }
     .urgency-moderate {
         background-color: #fff3e0;
         border-left: 5px solid #fb8c00;
         padding: 15px;
         border-radius: 5px;
+        color: #e65100 !important;
+    }
+    .urgency-moderate h3, .urgency-moderate p {
+        color: #e65100 !important;
     }
     .urgency-low {
         background-color: #e8f5e9;
         border-left: 5px solid #43a047;
         padding: 15px;
         border-radius: 5px;
+        color: #1b5e20 !important;
+    }
+    .urgency-low h3, .urgency-low p {
+        color: #1b5e20 !important;
     }
     .first-aid-box {
         background-color: #f5f5f5;
         border-radius: 10px;
         padding: 20px;
         margin-top: 10px;
+        color: #1a1a2e !important;
     }
     .disclaimer {
         background-color: #fff8e1;
@@ -76,6 +94,7 @@ st.markdown("""
         border-radius: 5px;
         padding: 15px;
         font-size: 0.9rem;
+        color: #5d4037 !important;
     }
     .metric-card {
         background-color: #ffffff;
@@ -83,6 +102,7 @@ st.markdown("""
         padding: 15px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         text-align: center;
+        color: #1a1a2e !important;
     }
 </style>
 """, unsafe_allow_html=True)
