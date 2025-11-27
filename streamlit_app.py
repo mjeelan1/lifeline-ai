@@ -330,6 +330,24 @@ if analyze_button and symptoms_input:
         
         if disease:
             st.markdown("---")
+            
+            # LOW CONFIDENCE WARNING
+            if confidence and confidence < 60:
+                st.error("""
+                ⚠️ **LOW CONFIDENCE WARNING**
+                
+                Your symptoms may not match the conditions our model was trained on. 
+                This could be because:
+                - Your symptoms describe a trauma/injury (gunshot, fracture, burns, etc.)
+                - Your symptoms are for a condition not in our database
+                - The symptom description needs more detail
+                
+                **Please seek professional medical help immediately.**
+                
+                The prediction below may not be accurate.
+                """)
+                st.markdown("---")
+            
             st.markdown("## 📊 Analysis Results")
             
             # Results in columns
