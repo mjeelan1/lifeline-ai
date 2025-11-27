@@ -438,7 +438,7 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666; padding: 20px;'>
     <p><strong>LifeLine AI</strong> | Built for humanitarian aid in crisis zones</p>
-    <p>MS in AI in Business Project | WP Carey School of Business, Arizona State University</p>
+    <p> CIS 508 - Machine Learning in Business Term Project | MS in AI in Business, WP Carey School of Business, Arizona State University</p>
     <p style='font-size: 0.8rem;'>Powered by Machine Learning • Designed with ❤️ for humanity</p>
 </div>
 """, unsafe_allow_html=True)
