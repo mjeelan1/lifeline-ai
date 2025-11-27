@@ -88,6 +88,13 @@ st.markdown("""
         margin-top: 10px;
         color: #1a1a2e !important;
     }
+    .first-aid-box p {
+        color: #1a1a2e !important;
+        margin: 10px 0;
+    }
+    .first-aid-box strong {
+        color: #1a1a2e !important;
+    }
     .disclaimer {
         background-color: #fff8e1;
         border: 1px solid #ffca28;
@@ -383,10 +390,11 @@ if analyze_button and symptoms_input:
                 
                 # First Aid
                 st.markdown("### 🩹 Recommended Actions")
-                st.markdown("<div class='first-aid-box'>", unsafe_allow_html=True)
+                first_aid_html = "<div class='first-aid-box'>"
                 for i, step in enumerate(first_aid, 1):
-                    st.markdown(f"**{i}.** {step}")
-                st.markdown("</div>", unsafe_allow_html=True)
+                    first_aid_html += f"<p><strong>{i}.</strong> {step}</p>"
+                first_aid_html += "</div>"
+                st.markdown(first_aid_html, unsafe_allow_html=True)
             
             # Additional warning for high urgency
             if urgency == "HIGH":
