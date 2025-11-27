@@ -3,6 +3,7 @@
 Intelligent Medical Aid for Crisis Zones & Remote Areas
 
 Author: Afan Jeelani
+CIS 508 - Machine Learning in Business Term Project (December 2025)
 MS in AI in Business | WP Carey School of Business, ASU
 """
 
@@ -288,14 +289,23 @@ medical advice, diagnosis, or treatment. Always seek the advice of a qualified h
 
 st.markdown("<br>", unsafe_allow_html=True)
 
+# Initialize session state for symptoms
+if 'symptoms' not in st.session_state:
+    st.session_state.symptoms = ""
+
 # Input Section
 st.markdown("### 📝 Describe Your Symptoms")
 symptoms_input = st.text_area(
     label="Enter symptoms",
+    value=st.session_state.symptoms,
     placeholder="Example: I have severe chest pain, sweating, and difficulty breathing...",
     height=120,
-    label_visibility="collapsed"
+    label_visibility="collapsed",
+    key="symptoms_input"
 )
+
+# Update session state when user types
+st.session_state.symptoms = symptoms_input
 
 # Example buttons
 st.markdown("**Try an example:**")
@@ -309,9 +319,8 @@ examples = [
 ]
 
 for i, (label, example) in enumerate(examples):
-    if example_cols[i].button(label, use_container_width=True):
-        symptoms_input = example
-        st.session_state['symptoms'] = example
+    if example_cols[i].button(label, use_container_width=True, key=f"example_{i}"):
+        st.session_state.symptoms = example
         st.rerun()
 
 # Analyze button
