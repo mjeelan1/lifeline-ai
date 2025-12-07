@@ -539,8 +539,7 @@ def main():
     st.markdown("""
     <div style="text-align: center; color: #888; font-size: 0.9em;">
         <p>🏥 LifeLine AI | Built for Humanitarian Aid in Crisis Zones</p>
-        <p>CIS 508 - Machine Learning in Business | MS-AIB</p>
-        <p>CIS W.P. Carey School of Business, ASU</p>
+        <p>CIS 508 - Machine Learning in Business | MS-AIB, W.P. Carey School of Business, ASU</p>
     </div>
     """, unsafe_allow_html=True)
 
